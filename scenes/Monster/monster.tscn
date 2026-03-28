@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b65oyd204l7as"]
+
+[ext_resource type="Script" uid="uid://cpp0p0xwwmj03" path="res://scenes/Monster/monster.gd" id="1_bd1pl"]
+[ext_resource type="Texture2D" uid="uid://dhy7lco65gguy" path="res://assets/textures/jerry_lvl1.png" id="1_rg2ae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bd1pl"]
+size = Vector2(189, 255)
+
+[node name="Monster" type="CharacterBody2D" unique_id=865058190]
+script = ExtResource("1_bd1pl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=260300743]
+texture = ExtResource("1_rg2ae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=984295127]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_bd1pl")

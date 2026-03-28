@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://byn4n6mn3wlpy"]
+
+[ext_resource type="Texture2D" uid="uid://ccwktfxlq5t4g" path="res://assets/textures/elephant.png" id="1_8afob"]
+[ext_resource type="Script" uid="uid://bfcqd7byynhej" path="res://scenes/player/player.gd" id="1_dovo2"]
+[ext_resource type="Script" uid="uid://dksvlw6ukxmtn" path="res://scripts/health_component.gd" id="3_gmlin"]
+[ext_resource type="Script" uid="uid://dwby1maqw6o75" path="res://scripts/hurt_box.gd" id="4_lvxji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+size = Vector2(610, 371)
+
+[node name="Player" type="CharacterBody2D" unique_id=1319777058 groups=["player"]]
+script = ExtResource("1_dovo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=102116176]
+texture = ExtResource("1_8afob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=675845962]
+position = Vector2(-10, -15.5)
+shape = SubResource("RectangleShape2D_dovo2")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1520816848]
+script = ExtResource("3_gmlin")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1278711902]
+script = ExtResource("4_lvxji")
