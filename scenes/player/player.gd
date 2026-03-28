@@ -8,4 +8,9 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = direction * speed
 	
+	
+	var mouse = get_global_mouse_position()
+	var press = Input.is_action_pressed("mouse")
+	print(press)
+	
 	move_and_slide()
