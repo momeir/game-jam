@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cpp0p0xwwmj03" path="res://scenes/Monster/monster.gd" id="1_bd1pl"]
 [ext_resource type="Texture2D" uid="uid://dhy7lco65gguy" path="res://assets/textures/jerry_lvl1.png" id="1_rg2ae"]
+[ext_resource type="Script" uid="uid://bevxsb6yam1yp" path="res://scripts/hit_box.gd" id="3_xuq6v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bd1pl"]
 size = Vector2(189, 255)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l4w75"]
+radius = 193.02332
 
 [node name="Monster" type="CharacterBody2D" unique_id=865058190]
 script = ExtResource("1_bd1pl")
@@ -15,3 +19,10 @@ texture = ExtResource("1_rg2ae")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=984295127]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_bd1pl")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=2055483904]
+script = ExtResource("3_xuq6v")
+metadata/_custom_type_script = "uid://bevxsb6yam1yp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=512439624]
+shape = SubResource("CircleShape2D_l4w75")
