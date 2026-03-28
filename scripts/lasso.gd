@@ -1,3 +1,4 @@
+class_name Lasso
 extends Line2D
 
 const LASSO_SPEED_INC = 10

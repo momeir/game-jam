@@ -31,3 +31,5 @@ health_component = NodePath("../HealthComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1854463166]
 position = Vector2(-10, -16)
 shape = SubResource("RectangleShape2D_lvxji")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=873493736]

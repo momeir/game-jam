@@ -12,4 +12,3 @@ position = Vector2(990, 212)
 position = Vector2(399, 540)
 
 [node name="Player" parent="." unique_id=1319777058 instance=ExtResource("1_nnsk1")]
-speed = null
